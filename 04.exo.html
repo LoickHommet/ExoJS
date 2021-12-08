@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function random(array) {
+            if (!array.length == [] && !array.length == "") {
+                const random = array[Math.floor(Math.random() * array.length)];
+                console.log(random)
+            }else{
+                console.log("error")
+            }
+
+        }
+        random(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"])
+        random([])
+        random("")
+
+    </script>
+</body>
+
+</html>

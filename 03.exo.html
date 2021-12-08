@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function arrayUnique(array) {
+            var a = array.concat();
+            for (var i = 0; i < a.length; ++i) {
+                for (var j = i + 1; j < a.length; ++j) {
+                    if (a[i] === a[j])
+                        a.splice(j--, 1);
+                }
+            }
+
+            return a;
+        }
+
+        var array1 = ["a", "b"];
+        var array2 = ["c", "d"];
+
+        var array3 = ["a", "b"];
+        var array4 = ["a", "d"];
+
+        var array5 = ["a", "b", "a"];
+        var array6 = ["a", "d", "b", "a"];
+
+        var result = arrayUnique(array1.concat(array2));
+        console.log(result);
+        var result2 = arrayUnique(array3.concat(array4));
+        console.log(result2);
+        var result3 = arrayUnique(array5.concat(array6));
+        console.log(result3);
+    </script>
+</body>
+
+</html>
